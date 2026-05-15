@@ -11,7 +11,7 @@ import java.io.FileReader;
 
 @CucumberOptions(
         tags = "",
-        features = {"src/test/resources/features/Testcase1.feature"},
+        features = {"src/test/resources/Features/Testcase1.feature"},
 
        glue = {"Step_definitions"},
         plugin = {"pretty",
