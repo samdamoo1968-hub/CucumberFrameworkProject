@@ -17,7 +17,7 @@ import java.io.FileReader;
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        dryRun = false
+        //dryRun = false
         )
 public class Testng_Runner extends AbstractTestNGCucumberTests {
 //    @DataProvider( parallel = true)
