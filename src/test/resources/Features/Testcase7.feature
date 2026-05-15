@@ -1,3 +1,4 @@
+@Smoke
 Feature:Search product
 
   Scenario Outline:Search product in Home Page

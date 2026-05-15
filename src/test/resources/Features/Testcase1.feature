@@ -1,3 +1,4 @@
+@Smoke
 Feature: Perform Login
 
   Scenario Outline:Login user

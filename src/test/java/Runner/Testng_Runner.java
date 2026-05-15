@@ -10,8 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 
 @CucumberOptions(
-        tags = "",
-        features = {"src/test/resources/Features/Testcase1.feature"},
+        tags = "@Smoke",
+        features = {"src/test/resources/Features/"},
 
        glue = {"Step_definitions"},
         plugin = {"pretty",
@@ -20,11 +20,11 @@ import java.io.FileReader;
         dryRun = false
         )
 public class Testng_Runner extends AbstractTestNGCucumberTests {
-//    @DataProvider( parallel = true)
-//    public Object[][] scenarios() {
-//        return super.scenarios();
-//
-//        };
+    @DataProvider( parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+
+        };
 
     }
 

@@ -1,3 +1,4 @@
+@Smoke
 Feature: Add product to Cart
 
   Scenario Outline:Add to cart

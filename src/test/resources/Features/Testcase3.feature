@@ -1,3 +1,4 @@
+@Smoke
 Feature: Add item to wishlist
 
   Scenario Outline:Add item to wishlist

@@ -1,3 +1,4 @@
+@Smoke
 Feature: Browse Categories
 
   Scenario:Validate each item under Categories.
