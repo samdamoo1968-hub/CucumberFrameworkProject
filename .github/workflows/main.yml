@@ -97,30 +97,3 @@ jobs:
             test-output/
             reports/
             target/
-
-      # Step 12 - Send Email Notification
-      - name: Send Email Notification
-        if: always()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.office365.com
-          server_port: 587
-          secure: false
-
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-
-          subject: GitHub Actions Automation Result
-
-          to: shreyas.s2@dxc.com
-          from: GitHub Actions
-
-          body: |
-            Automation execution completed.
-
-            Repository: ${{ github.repository }}
-            Branch: ${{ github.ref_name }}
-            Status: ${{ job.status }}
-
-            Workflow URL:
-            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
