@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class testcase_3 {
@@ -39,7 +40,7 @@ public class testcase_3 {
         Assert.assertEquals(notification_message,"The product has been added to your wishlist");
         driver.findElement(By.xpath("//span[@class='close']")).click();
         //7.Click on wishlist link from navigation menu at the top of homepage
-    WebDriverWait wait=new WebDriverWait(driver,5);
+    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
     wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//a[@class='ico-wishlist'])[1]"))));
         driver.findElement(By.xpath("(//a[@class='ico-wishlist'])[1]")).click();
         //8.verify product name under wishlist section

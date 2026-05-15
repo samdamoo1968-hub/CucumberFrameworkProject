@@ -2,7 +2,7 @@ package demowebshop_tricentis.Frameworked_tcs;
 
 import demowebshop_tricentis.Base.TestBase;
 import demowebshop_tricentis.Pages.*;
-import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

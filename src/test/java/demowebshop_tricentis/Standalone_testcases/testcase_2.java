@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 @Test
@@ -19,7 +20,7 @@ public class testcase_2 {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
         List<WebElement> elements=driver.findElements(By.xpath("(//div[contains(@class,'listbox')])[1]//li//a"));

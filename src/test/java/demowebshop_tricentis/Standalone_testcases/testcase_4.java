@@ -1,14 +1,16 @@
 package demowebshop_tricentis.Standalone_testcases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class testcase_4 {
@@ -39,7 +41,7 @@ public class testcase_4 {
         Assert.assertEquals(notifiaction_message,"The product has been added to your shopping cart");
         driver.findElement(By.xpath("//span[@class='close']")).click();
         //8.click on shopping cart link frm navigation bar
-        WebDriverWait wait=new WebDriverWait(driver,5);
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//a[@class='ico-cart'])[1]")))).click();
         // 9.Validate product name
         String product_name_confir=driver.findElement(By.xpath("//a[@class='product-name']")).getText();
